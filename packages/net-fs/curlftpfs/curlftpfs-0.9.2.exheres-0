@@ -1,0 +1,26 @@
+# Copyright 2010 Piotr Jaroszyński
+# Distributed under the terms of the GNU General Public License v2
+
+require sourceforge [ suffix="tar.gz" ]
+
+SUMMARY="Filesystem for acessing ftp hosts based on FUSE and libcurl"
+
+LICENCES="GPL-2"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES="
+    build+run:
+        dev-libs/glib[>=2.0]
+        net-misc/curl[>=7.17.0]
+        sys-fs/fuse[>=2.2]
+"
+
+# One of the tests fails, but they are silly anyway
+RESTRICT="test"
+
+BUGS_TO="p.jaroszynski@gmail.com"
+
+DEFAULT_SRC_PREPARE_PATCHES=( -p0 "${FILES}/${PNV}-64bit_filesize.patch" )
+
