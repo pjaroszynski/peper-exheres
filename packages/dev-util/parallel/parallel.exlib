@@ -1,0 +1,22 @@
+# Copyright 2010 Piotr Jaroszyński
+# Distributed under the terms of the GNU General Public License v2
+
+require gnu
+
+SUMMARY="Build and execute shell command lines from standard input in parallel"
+DESCRIPTION="GNU parallel is a shell tool for executing jobs in parallel locally or using remote
+computers. A job is typically a single command or a small script that has to be run for each of the
+lines in the input. The typical input is a list of files, a list of hosts, a list of users, a list
+of URLs, or a list of tables."
+
+LICENCES="GPL-3"
+SLOT="0"
+MYOPTIONS=""
+
+DEPENDENCIES="
+    build+run:
+        dev-lang/perl
+"
+
+BUGS_TO="p.jaroszynski@gmail.com"
+
