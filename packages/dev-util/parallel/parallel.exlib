@@ -15,7 +15,7 @@ MYOPTIONS=""
 
 DEPENDENCIES="
     build+run:
-        dev-lang/perl
+        dev-lang/perl:*
 "
 
 BUGS_TO="p.jaroszynski@gmail.com"
