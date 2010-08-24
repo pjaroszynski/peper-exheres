@@ -1,4 +1,6 @@
-http://bugs.gentoo.org/294960
+Source: Simeon Maryasin <marsoft@ya.ru> - http://bugs.gentoo.org/294960
+Upstream: http://sourceforge.net/tracker/index.php?func=detail&aid=2885967&group_id=160565&atid=816357
+Reason: Fixes runtime errors on 64bit
 --- ftpfs.c.old	2009-11-28 14:28:05.000000000 +0300
 +++ ftpfs.c	2009-11-28 14:28:19.000000000 +0300
 @@ -503,7 +503,7 @@
