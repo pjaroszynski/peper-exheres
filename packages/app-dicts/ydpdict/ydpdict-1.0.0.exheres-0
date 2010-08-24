@@ -1,0 +1,29 @@
+# Copyright 2010 Piotr Jaroszyński
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="Interface for the Collins Dictionary"
+HOMEPAGE="http://toxygen.net/ydpdict/"
+DOWNLOADS="http://toxygen.net/ydpdict/${PNV}.tar.gz"
+
+LICENCES="GPL-2"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES="
+    build:
+        dev-util/pkg-config
+    build+run:
+        app-dicts/libydpdict[>=${PV}]
+"
+
+BUGS_TO="p.jaroszynski@gmail.com"
+
+# libao support is broken
+DEFAULT_SRC_CONFIGURE_PARAMS=( "--without-libao" )
+
+src_install() {
+    default
+    keepdir "/usr/share/ydpdict/"
+}
+
