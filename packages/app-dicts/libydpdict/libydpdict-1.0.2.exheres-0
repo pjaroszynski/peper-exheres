@@ -1,0 +1,16 @@
+# Copyright 2010 Piotr Jaroszyński
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="Library for handling the Collins Dictionary database"
+HOMEPAGE="http://toxygen.net/ydpdict/"
+DOWNLOADS="http://toxygen.net/ydpdict/${PNV}.tar.gz"
+
+LICENCES="LGPL-2.1"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES=""
+
+BUGS_TO="p.jaroszynski@gmail.com"
+
