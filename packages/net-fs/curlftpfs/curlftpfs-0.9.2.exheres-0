@@ -1,4 +1,4 @@
-# Copyright 2010 Piotr Jaroszyński
+# Copyright 2010 Piotr Jaroszyński <p.jaroszynski@gmail.com>
 # Distributed under the terms of the GNU General Public License v2
 
 require sourceforge [ suffix="tar.gz" ]
