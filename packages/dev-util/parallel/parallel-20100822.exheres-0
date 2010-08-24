@@ -1,0 +1,12 @@
+# Copyright 2010 Piotr Jaroszyński
+# Distributed under the terms of the GNU General Public License v2
+
+require parallel
+
+PLATFORMS="~amd64"
+
+DEFAULT_SRC_PREPARE_PATCHES=(
+    -p1 "${FILES}/${PNV}-make-multiple-jobs.patch"
+    -p1 "${FILES}/${PNV}-force-symlink.patch"
+)
+

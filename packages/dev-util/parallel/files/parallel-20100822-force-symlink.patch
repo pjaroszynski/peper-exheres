@@ -1,0 +1,30 @@
+From 8d847374cc518335b8d01cce2e666f5a35671913 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Piotr=20Jaroszy=C5=84ski?= <p.jaroszynski@gmail.com>
+Date: Tue, 24 Aug 2010 17:47:08 +0200
+Subject: [PATCH] [build] Force the sem symlink creation
+
+Building the project from the tarball fails with:
+
+ln: creating symbolic link `sem': File exists
+
+Fix by using ln -f
+---
+ src/Makefile.am |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/src/Makefile.am b/src/Makefile.am
+index 4a03ffe..fb84e8a 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -19,7 +19,7 @@ sem.html: sem.pod Makefile
+ 	rm -f $(srcdir)/pod2htm*
+ 
+ sem: parallel
+-	ln -s parallel sem
++	ln -sf parallel sem
+ 
+ DISTCLEANFILES = parallel.1 sem.1 parallel.html sem.html
+ EXTRA_DIST = parallel sem parallel.1 sem.1 parallel.html sem.html sem.pod
+-- 
+1.7.2.2
+
